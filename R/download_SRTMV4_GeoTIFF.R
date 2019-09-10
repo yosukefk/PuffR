@@ -94,7 +94,12 @@ download_SRTMV4_GeoTIFF <- function(SP_object){
     tiffilename <- paste0(temp_dir, "/", file_list[i], ".tif")
     
     # Download the GeoTIFF file from the FTP server
-    download.file(url = paste0("http://gis-lab.info/data/srtm-tif/", 
+    # yk try another url
+#    download.file(url = paste0("http://gis-lab.info/data/srtm-tif/", 
+#                               file_list[i], ".zip"),
+#                  destfile = zipfilename, method = "auto", 
+#                  quiet = FALSE, mode = "wb", cacheOK = TRUE)
+    download.file(url = paste0("http://srtm.csi.cgiar.org/wp-content/uploads/files/srtm_5x5/TIFF/", 
                                file_list[i], ".zip"),
                   destfile = zipfilename, method = "auto", 
                   quiet = FALSE, mode = "wb", cacheOK = TRUE)
